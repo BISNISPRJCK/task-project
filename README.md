@@ -14,19 +14,19 @@ git clone https://github.com/BISNISPRJCK/task-project
 cd task-project
 2. Setup Backend
 bash
-Copy code
+
 cd backend
 npm install
 🗄️ Configure Database
 Create PostgreSQL database:
 
 sql
-Copy code
+
 CREATE DATABASE taskdb;
 Update database config in backend/config/db.js with your PostgreSQL username and password:
 
 js
-Copy code
+
 import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize("taskdb", "postgres", "Rakkha-17", {
@@ -38,7 +38,6 @@ const sequelize = new Sequelize("taskdb", "postgres", "Rakkha-17", {
 export default sequelize;
 ▶️ Run Backend
 bash
-Copy code
 nodemon server.js
 # or
 node server.js
@@ -47,7 +46,6 @@ Backend will run at:
 
 3. Setup Frontend
 bash
-Copy code
 cd ../frontend
 npm install
 npm start
@@ -61,7 +59,6 @@ Create Task
 POST /tasks
 
 json
-Copy code
 {
   "title": "Finish assignment",
   "description": "Complete the backend task",
